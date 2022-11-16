@@ -8,11 +8,13 @@ def talker():
 
     pub = rospy.Publisher('chatter', String, queue_size=10)
     rate = rospy.Rate(10) # 10hz
-
+    
+    count = 0
     while not rospy.is_shutdown():
-        hello_str = "hello world %s" % rospy.get_time()
-        rospy.loginfo(hello_str)
-        pub.publish(hello_str)
+        count += 1
+        message = "Publishing count: {}".format(count)
+        rospy.loginfo(message)
+        pub.publish(message)
         rate.sleep()
 
 
