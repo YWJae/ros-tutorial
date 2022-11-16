@@ -1,0 +1,3 @@
+<launch>
+  <include file="$(find indy7_gazebo)/launch/indy7_moveit_gazebo.launch"/>
+</launch>
