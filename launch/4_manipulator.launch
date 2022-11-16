@@ -1,3 +1,4 @@
 <launch>
-  <include file="$(find indy7_gazebo)/launch/indy7_moveit_gazebo.launch"/>
+  <include file="$(find indy7_robotiq_moveit_config)/launch/demo.launch"/>
+  <node name="pick_n_place" pkg="indy7_robotiq_moveit_interface" type="pick_n_place.py" output="screen"/>
 </launch>
